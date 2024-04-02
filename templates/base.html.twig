@@ -13,13 +13,18 @@
         {% endblock %}
     </head>
     <body>
-        {% include "nav.html.twig" %}
 
-        <main>
-            {% block body %}{% endblock %}
-        </main>
+        <div class="container-fluid">
+            {% include "nav.html.twig" %}
 
-        {% include "footer.html.twig" %}
+            <main>
+                {% block body %}{% endblock %}
+            </main>
+
+            {% include "footer.html.twig" %}
+        </div>
+
+
     </body>
 
 
