@@ -2,6 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
+use App\Form\ChangePasswordFormType;
+use App\Form\UserType;
+use App\Repository\UserRepository;
+use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,6 +23,7 @@ class ProfileController extends AbstractController
             'controller_name' => 'ProfileController',
         ]);
     }
+
     #[Route('/profile/edit', name: 'app_profile_edit')]
     public function modify(Request $request, EntityManagerInterface $entityManager): Response
     {
